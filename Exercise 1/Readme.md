@@ -49,7 +49,7 @@ mkdir fuzzing_xpdf && cd fuzzing_xpdf/
 ```
 To get your environment fully ready, you may need to install some additional tools (namely make and gcc) 
 ```
-sudo apt install build-essential
+sudo apt install build-essential wget sudo
 ```
 
 Download Xpdf 3.02:
@@ -72,7 +72,6 @@ Time to test the build. First of all, You'll need to download a few PDF examples
 cd $HOME/fuzzing_xpdf
 mkdir pdf_examples && cd pdf_examples
 wget https://github.com/mozilla/pdf.js-sample-files/raw/master/helloworld.pdf
-wget http://www.africau.edu/images/default/sample.pdf
 wget https://www.melbpc.org.au/wp-content/uploads/2017/10/small-example-pdf-file.pdf
 ```
 
@@ -97,7 +96,7 @@ You can install everything in two ways:
 
   ```
   sudo apt-get update
-  sudo apt-get install -y build-essential python3-dev automake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools
+  sudo apt-get install -y build-essential python3-dev automake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools ninja-build python3-pip cmake
   sudo apt-get install -y lld-11 llvm-11 llvm-11-dev clang-11 || sudo apt-get install -y lld llvm llvm-dev clang 
   sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-dev
   ```
